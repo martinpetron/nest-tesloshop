@@ -17,11 +17,12 @@ type ValidSizes = 'XS'|'S'|'M'|'L'|'XL'|'XXL'|'XXXL';
 type ValidTypes = 'shirts'|'pants'|'hoodies'|'hats';
 
 interface SeedUser {
-    email: string;
+    email:    string;
     fullName: string;
     password: string;
-    roles: string[];
+    roles:     string[];
 }
+
 
 interface SeedData {
     users: SeedUser[];
@@ -35,14 +36,14 @@ export const initialData: SeedData = {
         {
             email: 'test1@google.com',
             fullName: 'Test One',
-            password: bcrypt.hashSync('Abc123', 10 ),
+            password: bcrypt.hashSync( 'Abc123', 10 ),
             roles: ['admin']
         },
         {
             email: 'test2@google.com',
             fullName: 'Test Two',
-            password: bcrypt.hashSync('Abc123', 10 ),
-            roles: ['admin']
+            password: bcrypt.hashSync( 'Abc123', 10 ),
+            roles: ['user','super']
         }
     ],
 
